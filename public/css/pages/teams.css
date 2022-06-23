@@ -1,13 +1,18 @@
 .teams-section {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: ;
 }
+
 .teams {
-    width: 400px;
-    height: 400px;
-    /* background: rgb(138, 122, 122); */
-    margin:5px;
+    width: 350px;
+    height: 500px;
     border: 2px solid black;
+    /* margin: 2px; */
+    border-radius: 3px;
+    
     
 }
 .team-heading {
@@ -21,4 +26,53 @@ h3 {
 
 .teams {
     padding: 10px;
+}
+
+.members-email {
+    font-size: 1.4em;
+    margin-left: 15px;
+}
+
+p span {
+    font-weight: 900;
+}
+
+p {
+    font-weight: 500;
+}
+
+.select-member {
+    height: 35px;
+    margin-left:15px;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.btn-style {
+    padding: 2px;
+    border-radius: 3px;
+    height: 36px;
+    border: 0px solid ;
+    margin: 5px;
+    width: 50px;
+}
+
+button {
+    font-weight: bold;
+    color: white;
+}
+
+.set-icon{
+  position: relative;
+  font-size: 1.5em;
+  top: 50%;
+  left:50%;
+
+}
+
+@media ( min-width: 1000px ) {
+    .teams {
+        height: 410px;
+    }
 }
