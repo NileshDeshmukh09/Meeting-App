@@ -1,0 +1,24 @@
+.teams-section {
+    display: flex;
+    flex-direction: row;
+}
+.teams {
+    width: 400px;
+    height: 400px;
+    /* background: rgb(138, 122, 122); */
+    margin:5px;
+    border: 2px solid black;
+    
+}
+.team-heading {
+    font-size: 1.4em;
+    color: black;
+}
+
+h3 {
+    color: grey;
+}
+
+.teams {
+    padding: 10px;
+}

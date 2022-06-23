@@ -1,0 +1,57 @@
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-date {
+    border-radius: 5px;
+    width: 16em;
+    height: 40px;
+}
+
+h1,h2,h3 {
+    margin-left: 27px;
+    
+}
+h3 {
+    color: rgb(124, 123, 121);
+}
+.page-start {
+    margin-left: 25px;
+}
+
+.meet-schedule {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    
+
+}
+
+.meet-number {
+    width: 25px;
+}
+
+.meet-details {
+    flex-grow: 1;
+    background: rgb(63, 153, 205);
+    flex-basis: 100%;
+    width: auto;
+    height: 50px;
+    display: flex;
+
+}
+
+
+.meet-day-detail {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 5px 25px;
+    justify-self:center ;
+    
+    background: rgb(192, 186, 186);
+}

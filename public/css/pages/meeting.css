@@ -1,0 +1,13 @@
+.schedule-meet ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+ul li  a {
+    display: inline-block;
+    padding: 0.5em;
+    margin-right: 1em;
+    text-decoration: none;
+    color: black;
+}
