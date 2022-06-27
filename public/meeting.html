@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conference | Meeting App</title>
+    <title>Meeting | Conference</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
@@ -16,14 +16,16 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/pages/index.css">
     <link rel="stylesheet" href="./css/pages/meeting.css">
+    <link rel="stylesheet" href="./css/form.css">
 
 </head>
+
 <body>
     <nav>
         <ul class="list-unstyled menu container">
-            <!-- <li class="d-lg-none text-right">
+             <li class="d-lg-none text-right">
                 <button id="menu-button">Menu</button>
-            </li> -->
+            </li> 
             <li class="nav-items d-sm-none">
                 <a href="/index.html" class="link-plain page-start">Calender</a>
             </li>
@@ -34,13 +36,13 @@
                 <a href="./teams.html" class="link-plain">Teams</a>
             </li>
             <li class="nav-itmes d-sm-none user">
-                <a href="" class="link-plain user-name" onclick="dropdown()">Welcome <span>Nilesh09 !</span>
+                <button class="link-plain user-name" onclick="dropdown()">Welcome <span>Nilesh09 !</span>
                     <i class="fa-solid fa-caret-down"></i>
-                </a>
+                </button>
 
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="#logout">Logout</a> 
-                  </div>
+                    <a href="#logout">Logout</a>
+                </div>
             </li>
         </ul>
     </nav>
@@ -49,15 +51,152 @@
         <h1>Meeting</h1>
         <hr>
 
-        <div class="schedule-meet">
-            <ul>
-                <li><a href="#">filter/Search Meeting</a></li>
-                <li><a href="./add_Meeting.html">Add a meeting</a></li>
-                <li></li>
-            </ul>
+        <div class="tab">
+            <button class="tablinks active" onclick="openCity(event, 'search-filter')">filter/Search Meeting</button>
+            <button class="tablinks" onclick="openCity(event, 'add-meet')">Add a Meeting</button>
         </div>
 
+        <div id="search-filter" class="tabcontent">
+            <!-- Form -->
+            <div class="filter-form">
+
+                <form action="./meeting.html" method="POST">
+
+                    <h1 id="filter-heading">Search for Meetings </h1>
+                    <hr>
+                    <div class="form-group">
+                        <label for="date" class="form-data">Date</label>
+                        <!-- <input type="date" class="form-control" id="date" > -->
+                        <select class="form-control" id="search">
+                            <option class="options">ALL</option>
+                            <option class="options">PAST</option>
+                            <option class="options">TODAY</option>
+                            <option class="options">UPCOMING</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="search" class="form-data">Search for</label>
+                        <textarea name="search" id="search" cols="5" rows="3"
+                            placeholder="search using words which describe the meeting"></textarea>
+                    </div>
+
+
+                    <button class="btn btn-info btn-width">Select</button>
+
+                </form>
+
+            </div>
+
+            <div class="filter-box">
+
+                <h1>Meeting Matching search criteria</h1>
+                <hr>
+
+                <div class="filter-content">
+                    <p><span id="meet-date">05 August 2000</span> 06:00 - 07:00</p>
+
+
+                    <p>Project kickoff</p>
+                    <a href="#" class="btn btn-secondary btn-space remove-underline">Excuse Yourself</a>
+                    <hr>
+
+                    <p class="members-email"><span><b> Attendee :</b></span> fakeemail@fynd.com , fakeemail02@fynd.com</p>
+                    <div>
+                        <input type="number" class="select-member" placeholder="Select Member">
+                        <button class="button btn-style btn-info">Add</button>
+                    </div>
+
+
+
+                </div>
+
+                <div class="filter-content">
+                    <p><span id="meet-date">09 August 2000</span> 09:00 - 10:30</p>
+
+
+                    <p>AWS Architecture</p>
+                    <a href="#" class="btn btn-secondary btn-space remove-underline">Excuse Yourself</a>
+                    <hr>
+
+                    <p class="members-email"><span>Attendee :</span> fakeemail@fynd.com , fakeemail02@fynd.com</p>
+                    <div>
+                        <input type="number" class="select-member" placeholder="Select Member">
+                        <button class="button btn-style btn-info">Add</button>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <!-- Form end -->
+
+        </div>
+
+        <div id="add-meet" class="tabcontent">
+
+            <!-- Form -->
+            <div class="filter-form">
+
+                <form action="./meeting.html" method="POST">
+
+                    <h1 id="filter-heading">Add a New Meeting </h1>
+                    <hr>
+                    <div class="form-group">
+                        <label for="date" class="form-data">Date</label>
+                        <input type="date" class="form-control" id="date" >
+
+                        <!-- <select class="form-control" id="search">
+
+                            <option class="options">ALL</option>
+                            <option class="options">PAST</option>
+                            <option class="options">TODAY</option>
+                            <option class="options">UPCOMING</option>
+
+                        </select> -->
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search" class="form-data">Start time ( hh:mm )</label>
+                        <input type="time" id="search" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search" class="form-data">End time ( hh:mm )</label>
+                        <input type="time" id="search" >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="search" class="form-data">Description</label>
+                        <textarea name="search" id="search" cols="5" rows="3"
+                            placeholder="What is the Agenda of the Meeting ?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-data">EmailIds of attendees , or teams's short</label>
+                        <input type="email" id="email" placeholder="fake@email.com , @fake-day , fake@fynd.com">
+                        <p>Separte emailds / team short names by commas - team short names always begin with @</p>
+                    </div>
+
+
+                    <button class="btn btn-info btn-width">Add Meeting</button>
+
+                </form>
+
+            </div>
+           
+        </div>
+
+
+
+
     </main>
-    
+
+    <script src="./js/add-search-meet.js"></script>
     <script src="./js/dropdown.js"></script>
+
+
 </body>

@@ -1,8 +1,8 @@
 
 
-function dropdown(event) {
+function dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
-    event.preventDefault(); 
+    // event.preventDefault(); 
 }
 
 

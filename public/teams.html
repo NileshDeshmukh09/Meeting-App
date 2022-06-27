@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conference | Meeting App</title>
+    <title>Teams | Conference</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
@@ -23,9 +23,9 @@
 
     <nav>
         <ul class="list-unstyled menu container">
-            <!-- <li class="d-lg-none text-right">
+            <li class="d-lg-none text-right">
                 <button id="menu-button">Menu</button>
-            </li> -->
+            </li>
             <li class="nav-items  d-sm-none">
                 <a href="/index.html" class="link-plain page-start">Calender</a>
             </li>
@@ -36,9 +36,9 @@
                 <a href="" class="link-plain">Teams</a>
             </li>
             <li class="nav-itmes d-sm-none user">
-                <a href="" class="link-plain user-name" onclick="dropdown()">Welcome <span>Nilesh09 !</span>
+                <button class="link-plain user-name" onclick="dropdown()">Welcome <span>Nilesh09 !</span>
                     <i class="fa-solid fa-caret-down"></i>
-                </a>
+                </button>
 
                 <div id="myDropdown" class="dropdown-content">
                     <a href="#logout">Logout</a> 
@@ -51,10 +51,12 @@
         <h1>Teams</h1>
         <hr>
         <h3>View and edit team you were a part of</h3>
+        
         <div class="teams-section">
+
             <div class="teams">
                 <h3 class="team-heading">Customer Acquisition Campaign</h3>
-                <h3>@customer-acquisition</h3>
+                <h3 class="sub-heading">@customer-acquisition</h3>
                 
                 <h3>Team to come up with Strategies to win over customer by end of FY21</h3>
 
@@ -70,7 +72,7 @@
 
             <div class="teams">
                 <h3 class="team-heading">MERN stack Training</h3>
-                <h3>@mern-stack-taining</h3>
+                <h3 class="sub-heading">@mern-stack-taining</h3>
                 
                 <h3>Group attending MERN stack training for website revamp project</h3>
 
